@@ -37,10 +37,6 @@ namespace Constructors_Danilova.Classes
             allStudent.Add(new Student("Шестаков", "Дмитрий", "Андреевич"));
             // Возвращаем колекцию
             return allStudent;
-
-
         }
-
-
     }
 }
