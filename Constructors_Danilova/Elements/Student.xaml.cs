@@ -20,9 +20,15 @@ namespace Constructors_Danilova.Elements
     /// </summary>
     public partial class Student : UserControl
     {
-        public Student()
+        public Student(Classes.Student student)
         {
             InitializeComponent();
+            // В фамилию присваиваем фамилию полученную из Lastname + Firstname + Surname
+            tb_fio.Content = student.GetFI0();
+            // В степендию присваиваем получает её стедент или нет
+            tb_scholarship.Content = student.Scholarship ? "Степендия: получает" : "Степендия:не получает";
+            // В курс присваиваем номер курса
+            tb_course.Content = $"Курс: {student.Course}";
         }
     }
 }
